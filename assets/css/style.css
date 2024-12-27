@@ -13977,7 +13977,7 @@ figcaption {
 }
 
 .slide.slider-style-1 {
-  padding-top: 100px;
+  padding-top: 10px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -20825,8 +20825,8 @@ body.white-version .rn-btn-ulderline {
 }
 
 .white-version .slide .social-share-inner-left .social-share li a {
-  box-shadow: var(--shadow-white-3);
-  background: var(--gradient-box-w);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  background: #ffffff;
 }
 
 .white-version .slide .social-share-inner-left .social-share li a::before {
