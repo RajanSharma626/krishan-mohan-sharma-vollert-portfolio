@@ -1,0 +1,22 @@
+
+    RewriteEngine On
+
+    # Redirect 'home' to 'index.php'
+    RewriteRule ^dashboard$ index.php [L]
+
+    # Redirect 'gallary' to 'gallary.php'
+    RewriteRule ^gallaries$ gallary.php [L]
+    RewriteRule ^add-video$ add-gallary.php [L]
+
+    # Redirect 'edution' to 'edu.php'
+    RewriteRule ^education$ edu.php [L]
+
+    # Remove .php extension from URLs
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^([a-zA-Z0-9_-]+)$ $1.php [L,QSA]
+
+    # Redirect to index.php for non-existing files/directories
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L]

@@ -11818,7 +11818,7 @@ body.template-color-1 {
 }
 
 .header-wrapper .header-right {
-  margin-left: 30px;
+  /* margin-left: 30px; */
   justify-content: flex-end;
   display: flex;
   margin-right: -18px;
@@ -13982,13 +13982,13 @@ figcaption {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .slide.slider-style-1 {
-    padding-top: 100px;
+    padding-top: 10px;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .slide.slider-style-1 {
-    padding-top: 100px;
+    padding-top: 10px;
   }
 }
 
@@ -17327,7 +17327,7 @@ span.sr-only {
   color: var(--color-primary);
   font-size: 30px;
   font-weight: 600;
-  padding: 9px 25px;
+  padding: 9px ;
   box-shadow: var(--shadow-1);
   border-radius: 6px;
   display: inline-block;

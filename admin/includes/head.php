@@ -4,6 +4,7 @@
 <meta name="author" content="Mosaddek">
 <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 <link rel="shortcut icon" href="img/favicon.html">
+<base href="http://localhost/vollert-krishan-mohar-portfolio/admin/">
 <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/bootstrap-reset.css" rel="stylesheet">

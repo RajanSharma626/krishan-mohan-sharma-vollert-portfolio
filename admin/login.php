@@ -2,7 +2,7 @@
 include("includes/conn.php");
 // ===========================  Login Validation ================
 if (isset($_SESSION['admin_login']) || isset($_COOKIE['admin_loggedin'])) {
-    header('Location: /');
+    header('Location: dashboard');
     exit;
 }
 
@@ -22,7 +22,7 @@ if (isset($_POST['login'])) {
             $cookie_expiry = time() + 30 * 24 * 60 * 60; // 30 days
             setcookie('admin_loggedin', true, $cookie_expiry, '/', '', true, true);
 
-            header('Location: /admin');
+            header('Location: dashboard');
             exit();
         } else {
             $passerr = "Incorrect password";

@@ -11,7 +11,5 @@ if (isset($_COOKIE['admin_loggedin'])) {
 }
 
 // Redirect to login page
-header('Location: http://localhost/capra_design/admin/login');
+header('Location: login');
 exit();
-?>
-

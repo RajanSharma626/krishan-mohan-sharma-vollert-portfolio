@@ -1,13 +1,13 @@
 <?php
 include("includes/conn.php");
-$pageid = 2;
+$pageid = 3;
 
 
 if (isset($_GET['del']) && $_GET['del'] != '') {
     $id = $_GET['del'];
-    $sql = mysqli_query($conn, "DELETE FROM `projects` WHERE `id` = '$id'");
+    $sql = mysqli_query($conn, "DELETE FROM `edu` WHERE `id` = '$id'");
     if($sql){
-        header("Location: projects");
+        header("Location: edu");
     }
 }
 ?>
@@ -15,7 +15,7 @@ if (isset($_GET['del']) && $_GET['del'] != '') {
 <html lang="en">
 
 <head>
-    <title>Projects | Admin Panel</title>
+    <title>Education | Admin Panel</title>
     <?php include('includes/head.php') ?>
 </head>
 
@@ -34,9 +34,9 @@ if (isset($_GET['del']) && $_GET['del'] != '') {
             <section class="wrapper site-min-height">
                 <section class="card">
                     <header class="card-header">
-                        <span class="bold">Projects </span>
+                        <span class="bold">Education </span>
                         <span class="pull-right">
-                            <a href="add-project" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i>
+                            <a href="add-education" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i>
                                 Add</a>
                         </span>
                     </header>
@@ -48,13 +48,14 @@ if (isset($_GET['del']) && $_GET['del'] != '') {
                                     <th>Sno.</th>
                                     <th>Image</th>
                                     <th>Heading</th>
+                                    <th>Description</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
 
                                 <?php
-                                $testSQL = mysqli_query($conn, "SELECT * FROM `projects`");
+                                $testSQL = mysqli_query($conn, "SELECT * FROM `edu`");
                                 $sno = 1;
                                 while ($row = mysqli_fetch_assoc($testSQL)) {
                                 ?>
@@ -69,8 +70,11 @@ if (isset($_GET['del']) && $_GET['del'] != '') {
                                             <?php echo $row['heading'] ?>
                                         </td>
                                         <td class="align-middle">
+                                            <?php echo $row['description'] ?>
+                                        </td>
+                                        <td class="align-middle">
                                             <a href="?del=<?php echo $row['id'] ?>" class="btn btn-danger">Delete</a>
-                                            <a href="add-project?id=<?php echo $row['id'] ?>" class="btn btn-primary">Edit</a>
+                                            <a href="add-services?id=<?php echo $row['id'] ?>" class="btn btn-primary">Edit</a>
                                         </td>
                                     </tr>
                                 <?php $sno++; } ?>
